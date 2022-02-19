@@ -104,4 +104,8 @@ public class App {
         //TODO Write the solution to Collections Exercise Q.11.
 
     }
+
+    //TODO  Implement the algorithm to balance brackets as described
+    // in the textbook extract in section 15.6.1 (see PDF)
+
 }
