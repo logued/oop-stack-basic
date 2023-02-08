@@ -24,7 +24,7 @@ public class App {
 
     public void start() {
         stack1();
-        stack2();  // Exercise Q10
+        stack2();
         stack3();
     }
 
