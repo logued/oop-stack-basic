@@ -1,13 +1,13 @@
 package dkit.oop;
 
-/**                                                 Feb 2023
+/**                                                 Nov 2023
  * A Stack is a LIFO Queue (Last-In First-Out)
- * It operates like a stack of plates add at top and remove from top.
+ * It operates like a stack of plates - add at top and remove from top.
  * In this sample we use a Stack that uses underlying ArrayDeque.
  * ("Deque" stands for Double-Ended Queue)
  * We use a reference of Interface type Deque ('deck').
  *
- * (Use of the Java Stack class is no longer recommended, so , although
+ * (Use of the Java Stack class is no longer recommended, so, although
  * it is easier to read the code, we will not use it).
  */
 
@@ -32,7 +32,7 @@ public class App {
     {
         Deque<String> myStack = new ArrayDeque<>();
         // A stack that uses an underlying Array to store elements
-        // and uses a Deque interface for access.(pronounced "Deck")
+        // and uses a Deque interface for access. (pronounced "Deck")
 
         // PUSH (add) elements on to stack
         System.out.println("Pushing, A, B, C on to the stack:");
@@ -49,9 +49,10 @@ public class App {
         System.out.println("value popped = " + str);
 
         // PUSH is used to add an element on to the head of the stack
+        System.out.println("Pushing W on stack.");
         myStack.push("W");    // top->  W|B|A]
 
-        System.out.println("Popping (removing) all elements:");
+        System.out.println("Popping (removing) all elements: - pop, pop , pop !");
         while (!myStack.isEmpty()) {
             System.out.println(myStack.pop());
         }
@@ -63,9 +64,9 @@ public class App {
 
     public void stack2()
     {
-        //TODO add code to this starter code as described in TODOs
+        //TODO add code to this starter code as described in TODOs below.
 
-        //TODO create a stack to store String objects
+        //TODO declare a stack to store String objects
 
         Scanner in = new Scanner(System.in);
 
