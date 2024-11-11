@@ -1,14 +1,15 @@
 package dkit.oop;
 
-/**                                                 Nov 2023
+/**                                                 Nov 2024
  * A Stack is a LIFO Queue (Last-In First-Out)
  * It operates like a stack of plates - add at top and remove from top.
- * In this sample we use a Stack that uses underlying ArrayDeque.
+ * In this sample we use a Stack that uses underlying ArrayDeque (as this is what
+ * the Java documentation recommends)
  * ("Deque" stands for Double-Ended Queue)
  * We use a reference of Interface type Deque ('deck').
  *
  * (Use of the Java Stack class is no longer recommended, so, although
- * it is easier to read the code, we will not use it).
+ * it appears to be the obvious choice, we will not use it).
  */
 
 import java.util.ArrayDeque;
@@ -23,6 +24,7 @@ public class App {
     }
 
     public void start() {
+        // Three different stack samples:
         stack1();
         //stack2();
         //stack3();
@@ -30,42 +32,49 @@ public class App {
 
     public void stack1()
     {
-        Deque<String> myStack = new ArrayDeque<>();
+        Deque<String> stack = new ArrayDeque<>();
         // A stack that uses an underlying Array to store elements
         // and uses a Deque interface for access. (pronounced "Deck")
 
         // PUSH (add) elements on to stack - always at the top
         System.out.println("Pushing, A, B, C on to the stack:");
-        myStack.push("A");    // top->      A]
-        myStack.push("B");    // top->    B|A]
-        myStack.push("C");    // top->  C|B|A]
+        stack.push("A");    // top->      A]
+        stack.push("B");    // top->    B|A]
+        stack.push("C");    // top->  C|B|A]
 
-        // PEEK - use myStack.peek() to get a reference to, but not remove, the top element
-        String topElement = myStack.peek();
+        // PEEK - use stack.peek() to get a reference to, but not remove, the top element
+        String topElement = stack.peek();
         System.out.println("stack.peek() = " + topElement ); // top->  C|B|A]
 
         // POP - stack.pop() - return a reference to the top element and remove it from stack
         //                     note that the object itself is not deleted,
         //                     only the reference to it is removed from the stack
-        String str = myStack.pop();  // remove from head (top).   stack is now : top->  B|A]
+        String str = stack.pop();  // remove from head (top).   stack is now : top->  B|A]
         System.out.println("value popped = " + str);
 
         // PUSH is used to add an element on to the head/top of the stack
         System.out.println("Pushing W on stack.");
-        myStack.push("W");    // top->  W|B|A]
+        stack.push("W");    // top->  W|B|A]
 
         System.out.println("Popping (removing) all elements: - repeatedly pop() until stack is empty ");
-        while (!myStack.isEmpty()) {
-            System.out.println(myStack.pop());
+        while (!stack.isEmpty()) {
+            System.out.println(stack.pop());
         }
         System.out.println("Stack has been emptied.");
 
         // POPping an element from an empty stack will throw an exception
-         // myStack.pop();   // this line causes exception.
+         // stack.pop();   // this line causes exception.
     }
 
     public void stack2()
     {
+        // Here we will create a stack to hold String values.
+        // We will add a number of words to the stack by 'pushing'
+        // them on to the stack.
+        // Finally, we 'pop' each word off, and print it, thus printing
+        // the sequence of words in reverse.
+        // Add the code required below.
+
         //TODO add code to this starter code as described below.
         // 1. declare a stack to store objects of type String
 
@@ -78,13 +87,14 @@ public class App {
         while (!word.equals("q")) {
             word = in.next();
             if (!word.equals("q")) {
-                //TODO 2. add the word to stack  (push())
+                //TODO 2. add the inputted word to the stack  (push())
             }
         }
 
         System.out.println("Your words in reverse order are: ");
         //TODO 3. Write code to retrieve words from the stack - one by one -
         // and display them as they are removed.  (see loop is sample function above)
+        // Keep going until the stack is empty.
 
     }
 
